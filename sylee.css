@@ -8,8 +8,6 @@ p{
     font-size: 12px;
 }
 body{
-    
-    background: black;
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 main{
@@ -27,11 +25,11 @@ main{
     flex-direction: column;
     position: relative;
     background: white;
-    border: 1px solid black;
     border-radius: 20px;
     padding: 20px;
     margin-top: 60px;
     justify-content: space-between; 
+    box-shadow: 3px 3px 30px 0px hsl(273, 75%, 66%), 3px 3px 30px 0px hsl(240, 73%, 65%);
 }
 .container-img{
     width: 225px;
@@ -44,9 +42,13 @@ main{
     left: 40px;
 }
 
-.container-img img{
+.mobile{
     width: 225px;
     height: 225px;
+    display: block;
+}
+.desktop {
+    display: none;
 }
 .seprator{
     height: 100px;
@@ -102,4 +104,83 @@ footer{
     height: 30px;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+}
+
+
+@media only screen and (min-width:450px) {
+    
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin: 0px;
+    }
+    .container{
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        padding: 30px;
+        /*box-shadow: 0px 3px 30px 0px hsla(273, 75%, 66%,0.5), 0px 3px 30px 0px hsla(240, 73%, 65%,0.5);  */
+        box-shadow: 3px 3px gray;
+    }
+    .container-img{
+        /*background: url("./images/bg-pattern-desktop.svg"); */
+        background: white;
+        width: 200px;
+        height: 200px;
+        left: 0%;
+        top:50px;
+        background-repeat: no-repeat;
+        background-position: cover;
+        background-size: contain;
+        position: absolute;
+    }
+    .column1{
+        display: flex;
+        justify-content: center;
+    }
+    .seprator{
+        height: 1px;
+        width: 150px;
+    }
+    .column2{
+        width: 250px;
+    }
+    .woman{
+        width: 300px;
+        height: 200px;
+        left: -60px;
+        top:20px
+    }
+    .box{
+        width: 80px;
+        height: 80px;
+        top: 110px;
+        left: -38px;
+        z-index: 5;
+    }
+    .container3 {
+        width: 300px;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+    }
+    .container4{
+        width: 330px;
+        height: 450px;
+        position: absolute;
+        background: url(./images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        top: -80px;
+        left: -90px;
+    }
 }
